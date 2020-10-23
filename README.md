@@ -5,7 +5,7 @@ A chat log components with react.
 ## Usage
 
 ```tsx
-import ReactChatLog from 'react-chat-log'
+import ReactChatLog, { Text, link, image } from 'react-chat-log'
 
 function App() {
 
@@ -37,9 +37,15 @@ function App() {
       height={600}
       onReachTop={() => console.log('it top')}
       onScroll={offsetTop => console.log(offsetTop)} 
-      renderText={item => {}}
-      renderLink={item => {}}
-      renderImage={item => {}}
+      renderItem={item => {
+        if(item.msgType === 'text'){
+          return <Text {...item} />
+        }else if(item.msgType === 'link'){
+          return <link {...item} />
+        }else if(item.msgType === 'image'){
+          return <image {...item} />
+        }
+      }}
     />
   )
 }
