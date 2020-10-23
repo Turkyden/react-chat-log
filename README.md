@@ -32,16 +32,8 @@ function App() {
   return (
     <ReactChatLog 
       datas={datas} 
-      renderMsg={() => {
-        if(){
-        
-        }else if(){
-        
-        }else if(){
-        
-        }else{
-        }
-      }}
+      width={400}
+      height={600}
     />
   )
 }
