@@ -37,6 +37,9 @@ function App() {
       height={600}
       onReachTop={() => console.log('it top')}
       onScroll={offsetTop => console.log(offsetTop)} 
+      renderText={}
+      renderLink={}
+      renderImage={}
     />
   )
 }
