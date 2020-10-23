@@ -35,17 +35,8 @@ function App() {
       initIndex={10} 
       width={400}
       height={600}
-      onReachTop={() => console.log('it top')}
+      onReachTop={() => console.log('it top')} 
       onScroll={offsetTop => console.log(offsetTop)} 
-      renderItem={item => {
-        if(item.msgType === 'text'){
-          return <Text {...item} />
-        }else if(item.msgType === 'link'){
-          return <link {...item} />
-        }else if(item.msgType === 'image'){
-          return <image {...item} />
-        }
-      }}
     />
   )
 }
