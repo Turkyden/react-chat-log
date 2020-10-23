@@ -34,6 +34,9 @@ function App() {
       datas={datas} 
       width={400}
       height={600}
+      onReachTop={() => console.log('it top')}
+      onScroll={offsetTop => console.log(offsetTop)} 
+      initIndex={10} 
     />
   )
 }
